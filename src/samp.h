@@ -402,7 +402,8 @@ struct stOnFootData
 	float		fQuaternion[4];
 	uint8_t		byteHealth;
 	uint8_t		byteArmor;
-	uint8_t		byteCurrentWeapon;
+	uint8_t		byteCurrentWeapon : 6;
+	uint8_t		byteSpecialKeys : 2; // Y N H 
 	uint8_t		byteSpecialAction;
 	float		fMoveSpeed[3];
 	float		fSurfingOffsets[3];
@@ -427,7 +428,8 @@ struct stInCarData
 	float		fVehicleHealth;
 	uint8_t		bytePlayerHealth;
 	uint8_t		byteArmor;
-	uint8_t		byteCurrentWeapon;
+	uint8_t		byteCurrentWeapon : 6;
+	uint8_t		byteSpecialKeys : 2; // Y N H 
 	uint8_t		byteSiren;
 	uint8_t		byteLandingGearState;
 	uint16_t	sTrailerID;
@@ -462,7 +464,8 @@ struct stPassengerData
 {
 	uint16_t	sVehicleID;
 	uint8_t		byteSeatID;
-	uint8_t		byteCurrentWeapon;
+	uint8_t		byteCurrentWeapon : 6;
+	uint8_t		byteSpecialKeys : 2; // Y N H 
 	uint8_t		byteHealth;
 	uint8_t		byteArmor;
 	uint16_t	sLeftRightKeys;
