@@ -1017,9 +1017,9 @@ static void ini_entry_parse_type ( struct ini_entry *ent, int idx, const char *v
 		if ( split->argc != 1 )
 			goto wrong_argc;
 		if ( _stricmp(split->argv[0], "true") == 0 )
-			* (int *)ent_data->data = 1;
+			* (bool *)ent_data->data = 1;
 		else if ( _stricmp(split->argv[0], "false") == 0 )
-			* (int *)ent_data->data = 0;
+			* (bool *)ent_data->data = 0;
 		else
 		{
 			Log( "Invalid value '%s' in %s", split->argv[0], ini_entry_name(ent, idx) );
